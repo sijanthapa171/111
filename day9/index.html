@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Full Practice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+
+    h2 {
+      margin-top: 40px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+    }
+
+    /* 1. Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #333;
+      color: white;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 2. Center Box */
+    .center-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      background: #eee;
+      border-radius: 8px;
+    }
+
+    .box {
+      padding: 20px;
+      background: teal;
+      color: white;
+      border-radius: 8px;
+    }
+
+    /* 3. Cards */
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .card {
+      flex: 1 1 200px;
+      background: #3498db;
+      color: white;
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    /* 4. Sidebar Layout */
+    .layout {
+      display: flex;
+      gap: 20px;
+    }
+
+    .sidebar {
+      width: 200px;
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .content {
+      flex: 1;
+      background: #ecf0f1;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    /* 5. Order Demo */
+    .order-demo {
+      display: flex;
+      gap: 10px;
+    }
+
+    .order-item {
+      padding: 20px;
+      background: #9b59b6;
+      color: white;
+      border-radius: 8px;
+    }
+
+    .a { order: 3; }
+    .b { order: 1; }
+    .c { order: 2; }
+
+    /* 6. Flex Grow */
+    .flex-control {
+      display: flex;
+      gap: 10px;
+    }
+
+    .flex-control div {
+      padding: 20px;
+      color: white;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .box1 {
+      flex: 1;
+      background: red;
+    }
+
+    .box2 {
+      flex: 2;
+      background: green;
+    }
+
+    .box3 {
+      flex: 1;
+      background: blue;
+    }
+
+    /* 7. Align Self */
+    .align-demo {
+      display: flex;
+      align-items: center;
+      height: 200px;
+      background: #ddd;
+      border-radius: 8px;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .align-item {
+      padding: 20px;
+      background: #34495e;
+      color: white;
+      border-radius: 8px;
+    }
+
+    .special {
+      align-self: flex-end;
+      background: orange;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Complete Flexbox Practice</h1>
+
+  <section>
+    <h2>1. Navbar</h2>
+    <div class="navbar">
+      <div>MySite</div>
+      <ul class="nav-links">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>2. Center Box</h2>
+    <div class="center-box">
+      <div class="box">Centered Box</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>3. Cards Layout</h2>
+    <div class="cards">
+      <div class="card">Card 1</div>
+      <div class="card">Card 2</div>
+      <div class="card">Card 3</div>
+      <div class="card">Card 4</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>4. Sidebar Layout</h2>
+    <div class="layout">
+      <div class="sidebar">Sidebar</div>
+      <div class="content">Main Content Area</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>5. Order Property</h2>
+    <div class="order-demo">
+      <div class="order-item a">A</div>
+      <div class="order-item b">B</div>
+      <div class="order-item c">C</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>6. Flex Grow</h2>
+    <div class="flex-control">
+      <div class="box1">1</div>
+      <div class="box2">2</div>
+      <div class="box3">3</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>7. Align Self</h2>
+    <div class="align-demo">
+      <div class="align-item">1</div>
+      <div class="align-item special">2</div>
+      <div class="align-item">3</div>
+    </div>
+  </section>
+
+</body>
+</html>
