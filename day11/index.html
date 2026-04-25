@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Grid</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h2 {
+      margin-top: 40px;
+    }
+
+    .box {
+      background: lightblue;
+      border: 2px solid #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* 1. Explicit Grid */
+    .explicit {
+      display: grid;
+      grid-template-columns: 200px 200px 200px;
+      grid-template-rows: 100px 100px;
+      gap: 10px;
+    }
+
+    /* 2. Implicit Grid */
+    .implicit {
+      display: grid;
+      grid-template-columns: 200px 200px;
+      gap: 10px;
+    }
+
+    .implicit .item3 {
+      grid-row: 3; /* forces implicit row creation */
+    }
+
+    /* 3. Grid by Lines */
+    .lines {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 100px 100px;
+      gap: 10px;
+    }
+
+    .lines .span {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+      background: lightcoral;
+    }
+
+    /* 4. Grid by Areas */
+    .areas {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+      grid-template-columns: 1fr 2fr;
+      gap: 10px;
+    }
+
+    .header { grid-area: header; background: lightgreen; }
+    .sidebar { grid-area: sidebar; background: lightyellow; }
+    .main { grid-area: main; background: lightpink; }
+    .footer { grid-area: footer; background: lightgray; }
+
+    /* 5. Auto-placement */
+    .auto {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-flow: dense;
+      gap: 10px;
+    }
+
+    /* 6. Responsive Grid */
+    .responsive {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+    }
+
+    /* 7. Nested Grid */
+    .parent {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .child {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5px;
+      background: #eee;
+      padding: 10px;
+    }
+
+    .nested-item {
+      background: orange;
+      padding: 5px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>CSS Grid - All Concepts Demo</h1>
+
+  <!-- 1. Explicit Grid -->
+  <h2>1. Explicit Grid</h2>
+  <div class="explicit">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+  </div>
+
+  <!-- 2. Implicit Grid -->
+  <h2>2. Implicit Grid</h2>
+  <div class="implicit">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box item3">3 (forces row 3)</div>
+  </div>
+
+  <!-- 3. Grid by Lines -->
+  <h2>3. Grid by Lines</h2>
+  <div class="lines">
+    <div class="box span">Span 1 to 3</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+  </div>
+
+  <!-- 4. Grid by Areas -->
+  <h2>4. Grid by Areas</h2>
+  <div class="areas">
+    <div class="header">Header</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="main">Main</div>
+    <div class="footer">Footer</div>
+  </div>
+
+  <!-- 5. Auto-placement -->
+  <h2>5. Auto-placement Grid</h2>
+  <div class="auto">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+  </div>
+
+  <!-- 6. Responsive Grid -->
+  <h2>6. Responsive Grid</h2>
+  <div class="responsive">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+  </div>
+
+  <!-- 7. Nested Grid -->
+  <h2>7. Nested Grid</h2>
+  <div class="parent">
+    <div class="box">Parent 1</div>
+    <div class="child">
+      <div class="nested-item">A</div>
+      <div class="nested-item">B</div>
+      <div class="nested-item">C</div>
+      <div class="nested-item">D</div>
+    </div>
+  </div>
+
+</body>
+</html>
