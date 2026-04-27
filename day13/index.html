@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bento Grid</title>
+
+  <style>
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 150px;
+      gap: 15px;
+    }
+
+    .item {
+      background: #1e293b;
+      border-radius: 16px;
+      padding: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Bento Layout */
+    .item1 {
+      grid-column: span 2;
+      grid-row: span 2;
+      background: #6366f1;
+    }
+
+    .item2 {
+      grid-column: span 2;
+      background: #22c55e;
+    }
+
+    .item3 {
+      grid-row: span 2;
+      background: #f59e0b;
+    }
+
+    .item4 {
+      background: #ef4444;
+    }
+
+    .item5 {
+      grid-column: span 2;
+      background: #14b8a6;
+    }
+
+    .item6 {
+      background: #8b5cf6;
+    }
+
+    .item7 {
+      grid-column: span 2;
+      background: #ec4899;
+    }
+
+    .item8 {
+      background: #3b82f6;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="grid">
+    <div class="item item1">Big Card</div>
+    <div class="item item2">Wide Card</div>
+    <div class="item item3">Tall Card</div>
+    <div class="item item4">Small</div>
+    <div class="item item5">Wide</div>
+    <div class="item item6">Small</div>
+    <div class="item item7">Wide</div>
+    <div class="item item8">Small</div>
+  </div>
+
+</body>
+</html>
