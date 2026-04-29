@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+
+    /* 🔹 Flexbox Navbar */
+    .nav {
+      display: flex;
+      justify-content: space-around;
+      background: #222;
+      padding: 15px;
+    }
+
+    .nav div {
+      width: 80px;
+      height: 20px;
+      background: #fff;
+      border-radius: 4px;
+    }
+
+    /* 🔹 Grid Layout */
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .box {
+      background: #ddd;
+      height: 150px;
+      border-radius: 8px;
+    }
+
+    /* 🔹 Position Example */
+    .position-area {
+      position: relative;
+      margin: 10px;
+      height: 150px;
+      background: #ccc;
+      border-radius: 8px;
+    }
+
+    .absolute-box {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background: red;
+      top: 10px;
+      left: 10px;
+      border-radius: 6px;
+    }
+
+    /* 🔹 Display Example */
+    .inline-area {
+      padding: 10px;
+    }
+
+    .inline-area .small-box {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      background: #999;
+      margin: 5px;
+      border-radius: 6px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- 🔹 Flexbox Navbar (Boxes Only) -->
+  <div class="nav">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- 🔹 Grid Boxes -->
+  <div class="container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+
+  <!-- 🔹 Position Box -->
+  <div class="position-area">
+    <div class="absolute-box"></div>
+  </div>
+
+  <!-- 🔹 Inline-Block Boxes -->
+  <div class="inline-area">
+    <div class="small-box"></div>
+    <div class="small-box"></div>
+    <div class="small-box"></div>
+    <div class="small-box"></div>
+  </div>
+
+</body>
+</html>
