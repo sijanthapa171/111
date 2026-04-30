@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Montaga&display=swap');
+
+body {
+    background-color: #fdfaf5;
+    font-family: 'Montaga';
+    color: #2d1b0d; 
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.nav {
+    padding: 40px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; 
+    padding: 0;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #8c7662; 
+    font-size: 14px;
+}
+
+.logo {
+    width: 80px;    
+    height: auto;
+    margin: 0 20px;
+}
+
+.hero h1 {
+    font-size: 72px;
+    margin: 10px;
+}
+
+.hero p {
+    font-size: 16px;
+    margin: 5px;
+    color: #8c7662;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 40px;
+}
