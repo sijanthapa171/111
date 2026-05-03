@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f4f4f4;
+      padding: 40px;
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .parent {
+      position: relative; 
+      width: 250px;
+      height: 180px;
+      background: #4a90e2;
+      border-radius: 12px;
+      padding: 15px;
+      color: white;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .child {
+      position: absolute; 
+      width: 80px;
+      height: 80px;
+      background: #ff6b6b;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .top-left { top: 10px; left: 10px; }
+    .top-right { top: 10px; right: 10px; }
+    .bottom-left { bottom: 10px; left: 10px; }
+    .bottom-right { bottom: 10px; right: 10px; }
+
+  </style>
+</head>
+<body>
+
+  <div class="parent">
+    Parent Box
+    <div class="child top-left">Child</div>
+  </div>
+
+  <div class="parent">
+    Parent Box
+    <div class="child top-right">Child</div>
+  </div>
+
+  <div class="parent">
+    Parent Box
+    <div class="child bottom-left">Child</div>
+  </div>
+
+  <div class="parent">
+    Parent Box
+    <div class="child bottom-right">Child</div>
+  </div>
+
+</body>
+</html>
