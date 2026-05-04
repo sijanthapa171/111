@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Docuument</title>
+  <style>
+    html {
+      font-size: 16px; /* rem base */
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem; /* rem used */
+      padding: 2rem;
+    }
+
+    .box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      border-radius: 10px;
+    }
+
+    /* px (fixed size) */
+    .px-box {
+      width: 150px;
+      height: 150px;
+      background: #ff6b6b;
+      font-size: 16px;
+    }
+
+    /* em (relative to parent) */
+    .em-parent {
+      font-size: 20px;
+    }
+    .em-box {
+      width: 10em;  /* = 200px */
+      height: 5em;  /* = 100px */
+      background: #4ecdc4;
+    }
+
+    /* rem (root relative) */
+    .rem-box {
+      width: 12rem; /* = 192px */
+      height: 6rem;
+      background: #1a535c;
+    }
+
+    /* % (relative width) */
+    .percent-box {
+      width: 50%;
+      height: 100px;
+      background: #ffa600;
+    }
+
+    /* vw / vh (viewport based) */
+    .vwvh-box {
+      width: 30vw;
+      height: 20vh;
+      background: #6a4c93;
+    }
+
+    /* vmin / vmax */
+    .vmin-box {
+      width: 20vmin;
+      height: 20vmin;
+      background: #00b894;
+    }
+
+    .vmax-box {
+      width: 20vmax;
+      height: 10vmax;
+      background: #2d3436;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box px-box">px</div>
+
+    <div class="em-parent">
+      <div class="box em-box">em</div>
+    </div>
+
+    <div class="box rem-box">rem</div>
+
+    <div class="box percent-box">%</div>
+
+    <div class="box vwvh-box">vw/vh</div>
+
+    <div class="box vmin-box">vmin</div>
+
+    <div class="box vmax-box">vmax</div>
+  </div>
+
+</body>
+</html>
