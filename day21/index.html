@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Semantic + CSS Grid Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+        }
+
+        /* GRID CONTAINER */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+                "header header header header"
+                "aside main main section"
+                "footer footer footer footer";
+            gap: 15px;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        /* COMMON STYLE */
+        header,
+        main,
+        aside,
+        section,
+        footer {
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            grid-area: header;
+            background: #2c3e50;
+        }
+
+        main {
+            grid-area: main;
+            background: #3498db;
+        }
+
+        aside {
+            grid-area: aside;
+            background: #e67e22;
+        }
+
+        section {
+            grid-area: section;
+            background: #9b59b6;
+        }
+
+        footer {
+            grid-area: footer;
+            background: #2ecc71;
+        }
+
+        /* INSIDE GRID (CARDS) */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .card {
+            background: white;
+            color: black;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "header"
+                    "main"
+                    "aside"
+                    "section"
+                    "footer";
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header>
+            <h1>My Website</h1>
+        </header>
+
+        <!-- SIDEBAR -->
+        <aside>
+            <h2>Sidebar</h2>
+            <p>Links / Ads / Info</p>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <h2>Main Content</h2>
+            <p>This is the main section of the page.</p>
+
+            <div class="cards">
+                <div class="card">Box 1</div>
+                <div class="card">Box 2</div>
+                <div class="card">Box 3</div>
+            </div>
+        </main>
+
+        <!-- EXTRA SECTION -->
+        <section>
+            <h2>Extra Section</h2>
+            <p>Additional content goes here.</p>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>© 2026 My Website</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
